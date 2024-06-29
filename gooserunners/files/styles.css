@@ -12,6 +12,12 @@ body.dark-mode {
     transition: background 1s ease, color 0.3s ease;
 }
 
+/* Light mode styles */
+body.light-mode {
+    background: linear-gradient(to right, red, blue);
+    color: black;
+}
+
 /* Global styles */
 body {
     background: linear-gradient(to right, red, blue));
