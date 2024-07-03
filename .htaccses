@@ -7,3 +7,4 @@ ErrorDocument 405 /error_pages/405.html
 ErrorDocument 500 /error_pages/500.html
 
 Redirect 301 /gooserunners-privacy-policy.html /gooserunners/privacy-policy.html
+
