@@ -1,6 +1,6 @@
 /* Dark mode styles */
 body.dark-mode {
-    background: linear-gradient(to right, darkgreen, darkblue);
+    background: linear-gradient(to right, darkgrey, black);
     height: 100vh;
     margin: 0;
     display: flex;
