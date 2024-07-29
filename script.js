@@ -9,11 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set initial mode based on user preference or light mode
     if (prefersDarkMode) {
         body.classList.add("dark-mode");
+
+        darkModeToggle.textContent = "Toggle Light Mode";
     }
 
     // Toggle dark mode when the button is clicked
     darkModeToggle.addEventListener("click", function () {
         body.classList.toggle("dark-mode");
+
+        if(body.classList.contains("dark-mode")){
+            darkModeToggle.textContent = "Toggle Light Mode";
+        }else{
+            darkModeToggle.textContent = "Toggle Dark Mode";
+        }
     });
 });
-
