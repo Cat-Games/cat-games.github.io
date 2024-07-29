@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Games</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
+    <link id="style" rel="stylesheet" href="styles.css">
 
     <meta property="og:title" content="Cat Games Website">
     <meta property="og:description" content="Welcome to the website of Cat Games, Inc! The creators of GooseRunners..">
@@ -26,5 +26,20 @@
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </div>
     <script src="script.js"></script>
+
+     <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+          function updateLinkHref() {
+            const classic = getQueryParam('classic');
+            if (classic)
+                document.getElementById('style').href = "";
+            }
+         updateLinkHref();
+        }
+    </script>
 </body>
 </html>
