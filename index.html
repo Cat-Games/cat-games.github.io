@@ -12,7 +12,6 @@
     <meta property="og:image" content="/images/favicon.png">
     <meta property="og:url" content="https://cat-games.github.io/index.html">
     <meta name="twitter:card" content="summary_large_image">
-
 </head>
 <body>
     <h1>Welcome to Our Website!</h1>
@@ -27,19 +26,22 @@
     </div>
     <script src="script.js"></script>
 
-     <script>
+    <script>
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
         }
 
-          function updateLinkHref() {
+        function updateLinkHref() {
             const classic = getQueryParam('classic');
-            if (classic)
+            if (classic) {
+                // Set the href of the link element to an empty string
                 document.getElementById('style').href = "";
             }
-         updateLinkHref();
         }
+
+        // Call the function to check URL parameters and update the link
+        updateLinkHref();
     </script>
 </body>
 </html>
