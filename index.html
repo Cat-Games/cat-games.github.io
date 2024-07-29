@@ -29,20 +29,38 @@
     </footer>
     <script src="script.js"></script>
 
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Cat Games",
+          "url": "https://cat-games.github.io",
+          "logo": "https://cat-games.github.io/images/logo.png"
+        }
+    </script>
+
+    
     <script>
         function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
+            const query = window.location.search.substring(1);
+            const params = query.split('&');
+            for (let i = 0; i < params.length; i++) {
+                const pair = params[i].split('=');
+                if (pair[0] === param) {
+                    return pair[1] ? decodeURIComponent(pair[1]) : true;
+                }
+            }
+            return null;
         }
 
         function updateLinkHref() {
             const classic = getQueryParam('classic');
             console.log('Classic parameter:', classic); // Debugging line
-            if (classic) {
+            if (classic !== null) {
+                // Set the href of the link element to an empty string
                 document.getElementById('style').href = "";
             }
         }
-
 
         // Call the function to check URL parameters and update the link
         updateLinkHref();
