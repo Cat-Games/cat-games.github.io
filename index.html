@@ -34,11 +34,12 @@
 
         function updateLinkHref() {
             const classic = getQueryParam('classic');
+            console.log('Classic parameter:', classic); // Debugging line
             if (classic) {
-                // Set the href of the link element to an empty string
                 document.getElementById('style').href = "";
             }
         }
+
 
         // Call the function to check URL parameters and update the link
         updateLinkHref();
