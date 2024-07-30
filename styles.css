@@ -95,4 +95,9 @@ a {
     display: block;
 }
 
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+}
+
 
