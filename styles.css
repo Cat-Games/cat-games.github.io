@@ -26,6 +26,38 @@ body {
     transition: background 1s ease-in-out, color 0.3s ease;
 }
 
+/* Styles specific to the 'metro' theme */
+body.metro {
+    background-color: #e0e0e0; /* Lighter background for metro theme */
+    color: #000; /* Darker text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Metro-style font */
+}
+
+/* Add more specific styling for the metro theme */
+body.metro h1 {
+    color: #333; /* Metro theme header color */
+}
+
+body.metro p {
+    line-height: 1.6; /* Improved readability */
+}
+
+body.metro .button-container {
+    background-color: #0078d4; /* Metro-style button background color */
+}
+
+body.metro .button-container button {
+    background-color: #0078d4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body.metro .button-container button:hover {
+    background-color: #005a9e; /* Darker color on hover */
+}
 /* Button container styles */
 .button-container {
     display: flex;
