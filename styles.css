@@ -100,4 +100,41 @@ a {
     opacity: 1;
 }
 
+/* Styling for the cookie consent popup */
+.cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+}
+
+.cookie-popup p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.cookie-popup a {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+.cookie-popup button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cookie-popup button:hover {
+    background-color: #45a049;
+}
 
