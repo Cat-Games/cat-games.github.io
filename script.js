@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function() {
     const consentPopup = document.getElementById('cookie-consent-popup');
     const acceptButton = document.getElementById('accept-cookies');
+    const decline = document.getElementById('decline');
 
     // Function to check if cookie consent has been given
     function checkCookieConsent() {
@@ -36,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
             consentPopup.style.display = 'block';
         }
     }
+
+    decline.addEventListener('click', function() {
+        consentPopup.style.display = 'none';
+    });
 
     // Function to set a cookie
     function setCookie(name, value, days) {
