@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     const consentPopup = document.getElementById('cookie-consent-popup');
+    const overlay = document.getElementById('overlay');
     const acceptButton = document.getElementById('accept-cookies');
     const decline = document.getElementById('decline');
 
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     decline.addEventListener('click', function() {
         consentPopup.style.display = 'none';
+        overlay.style.display = 'none';
     });
 
     // Function to set a cookie
@@ -69,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     acceptButton.addEventListener('click', function() {
         setCookie('cookieConsent', 'true', 365); // Cookie valid for 365 days
         consentPopup.style.display = 'none';
+        overlay.style.display = 'none';
     });
 
     // Check for cookie consent on page load
