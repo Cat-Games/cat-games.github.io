@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const webhookUrl = 'https://discord.com/api/webhooks/1268725813201735733/yavV7kQr4FC-PzzXhRnCG6PT2-TsR2vY6CL38SPBEF9W3Pgv44bQftnPGCXW3XicHcm2';
 
     banAppealForm.addEventListener('submit', (event) => {
-        event.preventDefault();
+        event.preventDefault(); // Prevent the default form submission behavior
 
         if (!banAppealForm.checkValidity()) {
             alert('Please fill out all required fields.');
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     discordForm.addEventListener('submit', (event) => {
-        event.preventDefault();
+        event.preventDefault(); // Prevent the default form submission behavior
 
         if (!discordForm.checkValidity()) {
             alert('Please fill out all required fields.');
