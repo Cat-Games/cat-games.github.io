@@ -16,13 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('dark-mode');
     }
 
-    // Check if the URL has ?discord and switch the form accordingly
     if (window.location.search.includes('?discord')) {
         banAppealFormContainer.style.display = 'none';
         discordFormContainer.style.display = 'block';
     }
 
-    // Button to switch between forms
     const switchFormButton = document.createElement('button');
     switchFormButton.textContent = 'Switch Form';
     document.body.appendChild(switchFormButton);
@@ -49,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const webhookUrl = 'https://discord.com/api/webhooks/1268725813201735733/yavV7kQr4FC-PzzXhRnCG6PT2-TsR2vY6CL38SPBEF9W3Pgv44bQftnPGCXW3XicHcm2';
 
-    // Ban Appeal Form Submission
     banAppealForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
@@ -87,16 +84,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Success:', data);
             alert('Your appeal has been submitted successfully!');
-            banAppealForm.reset(); // Reset form fields after submission
+            banAppealForm.reset();
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Error submitting ban appeal:', error);
             alert('There was an error submitting your appeal. Please try again later.');
         });
     });
 
-    // Discord Ban Appeal Form Submission
     discordForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
@@ -132,11 +132,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Success:', data);
             alert('Your Discord appeal has been submitted successfully!');
-            discordForm.reset(); // Reset form fields after submission
+            discordForm.reset();
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Error submitting Discord appeal:', error);
             alert('There was an error submitting your appeal. Please try again later.');
         });
     });
