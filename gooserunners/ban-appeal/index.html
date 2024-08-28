@@ -7,22 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="banAppealForm">
-        <label for="playfabID">Enter your player ID:</label>
-        <input id="playfabID" name="playfabID" type="password" required>
+    <div id="banAppealFormContainer">
+        <form id="banAppealForm">
+            <label for="playfabID">Enter your player ID:</label>
+            <input id="playfabID" name="playfabID" type="password" required>
 
-        <label for="email">Enter your email address</label>
-        <input id="email" name="email" type="email" required>
+            <label for="email">Enter your email address</label>
+            <input id="email" name="email" type="email" required>
 
-        <label for="reason">Why did you get banned (remember, we can check to see if you're lying!)</label>
-        <input id="reason" name="reason" type="text" required>
+            <label for="reason">Why did you get banned (remember, we can check to see if you're lying!)</label>
+            <input id="reason" name="reason" type="text" required>
 
-        <label for="opinion">Why do you think we should unban you?</label>
-        <input id="opinion" name="opinion" type="text" required>
+            <label for="opinion">Why do you think we should unban you?</label>
+            <input id="opinion" name="opinion" type="text" required>
 
-        <button id="submit" type="submit">Submit</button>
-        <button id="help">Help</button> 
-    </form>
+            <button id="submit" type="submit">Submit</button>
+            <button id="help">Help</button> 
+        </form>
+    </div>
+
+    <div id="discordFormContainer" style="display: none;">
+        <form id="discordForm">
+            <label for="discordID">Enter your Discord ID:</label>
+            <input id="discordID" name="discordID" type="text" required>
+
+            <label for="additionalInfo">Why do you want to be unbanned from the Discord server?</label>
+            <input id="additionalInfo" name="additionalInfo" type="text" required>
+
+            <button id="submitDiscord" type="submit">Submit</button>
+        </form>
+    </div>
 
     <a href="https://cat-games.github.io/gooserunners/"><button>Home</button></a>
     
@@ -33,6 +47,7 @@
         <h2>Why do I need to provide my Email?</h2>
         <p>We will email you about 3 days - 1 week after you submit to let you know if your appeal got accepted</p>
     </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
