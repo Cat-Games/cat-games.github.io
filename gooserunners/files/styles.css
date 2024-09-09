@@ -1,4 +1,12 @@
 /* Dark mode styles */
+
+@font-face{
+    font-family: 'Goosie';
+    src: url('goosie2.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body.dark-mode {
     background: linear-gradient(to right, darkred, darkblue);
     height: 100vh;
@@ -20,14 +28,14 @@ body.light-mode {
 
 /* Global styles */
 body {
-    background: linear-gradient(to right, red, blue));
+    background: linear-gradient(to right, red, blue);
     height: 100vh;
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Goosie', sans-serif;
     color: black;
     transition: background 1s ease-in-out, color 0.3s ease;
 }
