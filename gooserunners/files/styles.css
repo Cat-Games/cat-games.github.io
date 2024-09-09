@@ -18,6 +18,7 @@ p {
 /* Apply uppercase to buttons */
 button {
     text-transform: uppercase;
+    font-family: 'Goosie', sans-seif;
 }
 
 body.dark-mode {
