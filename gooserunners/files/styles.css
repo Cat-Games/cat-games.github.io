@@ -1,6 +1,5 @@
 /* Dark mode styles */
-
-@font-face{
+@font-face {
     font-family: 'Goosie';
     src: url('goosie2.woff2') format('woff2');
     font-weight: normal;
@@ -15,7 +14,7 @@ body.dark-mode {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Goosie', sans-serif;
     color: white;
     transition: background 1s ease, color 0.3s ease;
 }
