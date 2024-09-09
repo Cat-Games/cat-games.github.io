@@ -6,6 +6,20 @@
     font-style: normal;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+/* Apply uppercase to paragraphs */
+p {
+    text-transform: uppercase;
+}
+
+/* Apply uppercase to buttons */
+button {
+    text-transform: uppercase;
+}
+
 body.dark-mode {
     background: linear-gradient(to right, darkred, darkblue);
     height: 100vh;
@@ -37,6 +51,7 @@ body {
     font-family: 'Goosie', sans-serif;
     color: black;
     transition: background 1s ease-in-out, color 0.3s ease;
+    text-transform: uppercase;
 }
 
 /* Button container styles */
